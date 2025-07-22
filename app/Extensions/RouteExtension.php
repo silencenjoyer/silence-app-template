@@ -15,9 +15,14 @@ use Silence\Routing\RouteProviders\RouteProviderRegistry;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 
+/**
+ * An extension of the application that registers routes.
+ */
 class RouteExtension extends AbstractExtension
 {
     /**
+     * {@inheritDoc}
+     *
      * @param ContainerBuilder $container
      * @param KernelConfig $config
      * @return void

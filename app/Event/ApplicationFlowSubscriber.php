@@ -10,6 +10,11 @@ use Silence\Event\Realizations\Symfony\Types\KernelBooted;
 use Silence\Event\Realizations\Symfony\Types\OnResponse;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
+/**
+ * This is the base class for system event subscribers.
+ *
+ * It records the time taken by the application to process the request.
+ */
 readonly class ApplicationFlowSubscriber implements EventSubscriberInterface
 {
     private LoggerInterface $logger;
@@ -20,6 +25,11 @@ readonly class ApplicationFlowSubscriber implements EventSubscriberInterface
         $this->logger = $logger;
     }
 
+    /**
+     * {@inheritDoc}
+     *
+     * @return array<string, string>
+     */
     public static function getSubscribedEvents(): array
     {
         return [
@@ -28,6 +38,11 @@ readonly class ApplicationFlowSubscriber implements EventSubscriberInterface
         ];
     }
 
+    /**
+     * A method that records the kernel startup in the log.
+     *
+     * @return void
+     */
     public function booted(): void
     {
         $this->bootTime = microtime(true);
@@ -36,6 +51,13 @@ readonly class ApplicationFlowSubscriber implements EventSubscriberInterface
         );
     }
 
+    /**
+     * A method that records the completion of request processing and response sending.
+     *
+     * It also records how much time was required for processing.
+     *
+     * @return void
+     */
     public function onResponse(): void
     {
         $now = microtime(true);

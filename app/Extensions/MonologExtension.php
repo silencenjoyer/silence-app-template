@@ -15,9 +15,16 @@ use Silence\KernelExtension\AbstractExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 
+/**
+ * This extension registers monolog as an implementation of the PSR-3 logger.
+ *
+ * By default, we only reserve the service by the name of the {@see LoggerInterface}.
+ */
 class MonologExtension extends AbstractExtension
 {
     /**
+     * {@inheritDoc}
+     *
      * @throws Exception
      */
     public function configure(ContainerBuilder $container, KernelConfig $config): void

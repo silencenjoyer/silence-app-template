@@ -14,6 +14,9 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
+/**
+ * This extension registers symfony events as an event handling system.
+ */
 class SymfonyEventExtension extends AbstractExtension
 {
     /**

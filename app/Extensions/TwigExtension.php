@@ -13,6 +13,9 @@ use Symfony\Component\DependencyInjection\Definition;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
+/**
+ * This extension registers twig as a content renderer.
+ */
 class TwigExtension extends AbstractExtension
 {
     public function configure(ContainerBuilder $container, KernelConfig $config): void
