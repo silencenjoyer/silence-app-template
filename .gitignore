@@ -1,0 +1,9 @@
+.idea
+
+vendor
+
+storage/cache
+var
+
+.env
+**/.DS_Store
