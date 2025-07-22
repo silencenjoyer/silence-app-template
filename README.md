@@ -11,8 +11,8 @@ Web application template for [Silence PHP Framework](https://github.com/silencen
 ## ⚙️ Installation
 
 ```
-composer create-project --stability=dev silencenjoyer/silence-app-template silence
-cd silence
+composer create-project --stability=dev silencenjoyer/silence-app-template silence-app
+cd silence-app
 ```
 
 ## 🚀 To run the app:
