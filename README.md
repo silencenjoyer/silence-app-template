@@ -44,7 +44,7 @@ resources/              Application resources.
     views/              View templates.
 storage/                Files generated during runtime.
 var/                    Files generated during runtime.
-tests/                  A set of Codeception tests for the application.
+tests/                  A set of Unit tests for the application.
 vendor/                 Installed Composer packages.
 ```
 
